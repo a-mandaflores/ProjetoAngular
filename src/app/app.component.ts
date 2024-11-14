@@ -9,5 +9,10 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = '1.Intro';
+  title: string = '1.Intro';
+  myBtn: string = 'My button'
+  isDisable: boolean = true
+  angularImagem: string = '../assets/favicon.ico'
+  bgColor: string = 'green'
+  color: string = 'white'
 }
