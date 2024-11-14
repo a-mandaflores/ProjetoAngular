@@ -17,3 +17,7 @@ Hello, {{title}}
 <div [ngClass]="classes">
   {{ message }}
 </div>
+
+<div *ngIf="!isLoggedIn"> Welcome Amanda</div>
+<div *ngIf="isLoggedIn"> Welcome {{ userName }}</div>
+<button (click)="change()">click aqui</button>

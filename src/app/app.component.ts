@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { NgClass, NgStyle } from '@angular/common';
+import { NgClass, NgIf, NgStyle } from '@angular/common';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, NgClass, NgStyle],
+  imports: [RouterOutlet, FormsModule, NgClass, NgStyle, NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -27,4 +27,11 @@ export class AppComponent {
 
   message: string = 'Meu nome'
   classes: string = 'text bgColor'
+
+  isLoggedIn: boolean = true;
+  userName: string = 'User'
+
+  change(){
+    this.isLoggedIn= !this.isLoggedIn
+  }
 }
